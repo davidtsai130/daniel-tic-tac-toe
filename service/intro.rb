@@ -3,7 +3,7 @@ class Intro
 
   def make_player
     puts "What is your name?"
-    @player = Player.new(gets.chomp)
+    @player = Player.new(gets.chomp.capitalize)
     until @player.symbol=="X" || @player.symbol=="O"
      puts "Do you want X or O?"
      @player.symbol = gets.chomp.upcase 
@@ -25,19 +25,3 @@ class Intro
 
 
 end 
-
-# class Runner
-
-#   def run
-#     intro = Intro.new
-#     player = intro.run
-#   end
-# end
-
-
-
-
-
- # def run
-  #   [player, computer]
-  # end

@@ -3,9 +3,9 @@ class PlayerMove
   attr_accessor :player, :board, :move
 
   def initialize(player, board)
-    PrintBoard.new(board).run
+    # PrintBoard.new(board).run
     @board = board 
-    @player = player
+    @player = player #gives access to symbol
   end 
 
   def ask_for_move
@@ -17,7 +17,7 @@ class PlayerMove
   end 
 
   def valid_move? 
-    board[@move].value == " " && (@move > 0 && @move < 9) ? true : false
+    board[@move].value == " " && (@move >= 0 && @move <= 9) ? true : false
   end 
 
   def put_on_board
@@ -32,9 +32,6 @@ class PlayerMove
     end 
       put_on_board
   end 
-
-
-
 
 
 
